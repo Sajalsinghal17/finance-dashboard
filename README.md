@@ -52,4 +52,4 @@ A modern and responsive personal finance dashboard built using **React, Zustand,
 
 1. Clone the repository:
 ```bash
-git clone <your-repo-link>
+git clone https://github.com/Sajalsinghal17/finance-dashboard
