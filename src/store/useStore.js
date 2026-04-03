@@ -1,11 +1,50 @@
 import { create } from "zustand";
 
+// ✅ DEFAULT MOCK DATA
+const defaultData = [
+  {
+    id: 1,
+    date: "2026-04-01",
+    amount: 5000,
+    category: "Salary",
+    type: "income",
+  },
+  {
+    id: 2,
+    date: "2026-04-02",
+    amount: 800,
+    category: "Food",
+    type: "expense",
+  },
+  {
+    id: 3,
+    date: "2026-04-03",
+    amount: 1200,
+    category: "Shopping",
+    type: "expense",
+  },
+  {
+    id: 4,
+    date: "2026-04-04",
+    amount: 2000,
+    category: "Freelance",
+    type: "income",
+  },
+];
+
+// ✅ LOAD DATA
 const getInitialData = () => {
   try {
     const data = JSON.parse(localStorage.getItem("transactions"));
-    return Array.isArray(data) ? data : [];
+
+    if (!data || data.length === 0) {
+      localStorage.setItem("transactions", JSON.stringify(defaultData));
+      return defaultData;
+    }
+
+    return data;
   } catch {
-    return [];
+    return defaultData;
   }
 };
 
