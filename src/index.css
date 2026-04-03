@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth font */
+body {
+  @apply bg-gray-100 dark:bg-gray-950 text-gray-800 dark:text-gray-200;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Glass card */
+.glass {
+  @apply bg-white/60 dark:bg-gray-900/60 backdrop-blur-lg border border-white/20 dark:border-gray-700;
+}
